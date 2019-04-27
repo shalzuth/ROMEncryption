@@ -22,7 +22,7 @@ namespace ROMEncryption
             var encryptedBytes = fileBytes.Skip(12).ToArray();
             var cipher = new ROMDesCipher(ROMKey, 8);
             var decryptedBytes = cipher.Decrypt(encryptedBytes);
-            File.WriteAllBytes(file + ".lua", decryptedBytes.Take(size).ToArray());
+            File.WriteAllBytes(file.replace(".bytes","") + ".lua", decryptedBytes.Take(size).ToArray());
         }
         // with unity header
         public static void EncryptFile(String file)
@@ -48,7 +48,7 @@ namespace ROMEncryption
             unityBlob.AddRange(BitConverter.GetBytes(payload.Count));
             unityBlob.AddRange(payload);
 
-            File.WriteAllBytes(file + ".bytes", unityBlob.ToArray());
+            File.WriteAllBytes(file.replace(".lua","") + ".bytes", unityBlob.ToArray());
         }
         private UInt32[] EncryptionKey;
         private UInt32[] DecryptionKey;
