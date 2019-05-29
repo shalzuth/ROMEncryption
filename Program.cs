@@ -23,7 +23,7 @@ namespace ROMEncryption
         static void Main(string[] args)
         {
             //DumpFromUnity3d(); // takes about 40 seconds.
-
+            new System.Net.WebClient().DownloadFile("https://managedway.dl.sourceforge.net/project/unluac/Unstable/unluac_2015_06_13.jar", "unluac_2015_06_13.jar");
             // converting all files takes about 10 minutes.
             var files = Directory.EnumerateFiles(@"rawlua", "*.bytes", SearchOption.AllDirectories);
             foreach (var file in files)
