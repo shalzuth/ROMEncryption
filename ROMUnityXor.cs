@@ -8,7 +8,7 @@ namespace ROMEncryption
 {
     public static class ROMUnityXor
     {
-        public static Byte[] ROMXorKey = new Byte[] { 0xde, 0xff, 0xdc, 0x60, 0xfe, 0xfe, 0xdf, 0xff };
+        public static Byte[] ROMXorKey = new Byte[] { 0x87, 0x87, 0x87, 0x87, 0x87, 0x87, 0x87, 0x87 };
         public static void XorChain(Byte[] input, Byte[] xorChain)
         {
             for (int i = 0; i < input.Length; i++)

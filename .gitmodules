@@ -1,0 +1,3 @@
+[submodule "UtinyRipper"]
+	path = UtinyRipper
+	url = https://github.com/zehaoh/UtinyRipper

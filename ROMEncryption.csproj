@@ -47,9 +47,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ROMDesCipher.cs" />
     <Compile Include="ROMUnityXor.cs" />
+    <Compile Include="ROMUnlua.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="UtinyRipper\UtinyRipperCore\UtinyRipperCore.csproj">
+      <Project>{ca9420f4-4b54-4727-91e6-cce20916d795}</Project>
+      <Name>UtinyRipperCore</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
